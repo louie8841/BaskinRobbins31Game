@@ -1,7 +1,7 @@
 # BaskinRobbins31Game
 
 ## What it is
-- Baskin Robbins 31 game made with python
+- Baskin Robbins 31 game made with python tkinter
 
 ## How to play Baskin Robbins 31 game
 1. Decide the order
