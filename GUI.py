@@ -46,7 +46,9 @@ class NumberGame:
             self.root.after(1000, self.computer_turn)
 
     def create_game_screen(self):
-        self.clear_screen
+        self.clear_screen()
+
+        # 맨 위 버튼
         self.btn_frame = tk.Frame(self.root)
         self.btn_frame.pack(side="top", pady=30)
         self.num_buttons = []
@@ -56,13 +58,16 @@ class NumberGame:
             btn.grid(row=0, column=i - 1, padx=30, pady=10)
             self.num_buttons.append(btn)
 
+        # 사용자 외침 라벨
         self.user_said_label = tk.Label(self.root, text="", font=("Arial", 22), fg="blue")
         self.user_said_label.pack(pady=10)
 
+        # 중앙 숫자
         self.info_label = tk.Label(self.root, text=f"Current number: {self.current_number}",
                                    font=("Arial", 32))
         self.info_label.pack(expand=True)
 
+        # 컴퓨터 외침 라벨
         self.computer_choice_label = tk.Label(self.root, text="", font=("Arial", 22), fg="red")
         self.computer_choice_label.pack(side="bottom", pady=40)
 
